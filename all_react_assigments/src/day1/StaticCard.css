@@ -1,0 +1,21 @@
+   .container{
+    display: flex;
+    justify-content:space-around;
+   }
+
+   .card{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #f7c5c5;
+    border-radius: 20px;
+    margin-bottom: 20px;
+   }
+
+   ul{
+    list-style-type: none;
+    padding: auto;
+   }
+
+   li{
+    margin-bottom: 5px;
+   }
