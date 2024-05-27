@@ -1,0 +1,71 @@
+What is TCP Protocol?
+Explain all the different HTTP methods?
+What are HTTP headers?
+What are some HTTP response codes? what does it mean? 2xx, 3xx, 4xx, 5xx
+What does cache control on http response mean?
+What is polling?
+What is long polling?
+What are web sockets?
+How is web sockets different from HTTP?
+What is HTTPS?
+What is Cross Origin Resource Sharing? ( CORS ) Why do we need it?
+What does Access-Control-Allow-Origin header do?
+What is clickjacking? How do you fix it?
+What are some performance metrics for your website?
+What does the following term mean?
+Time to first byte,
+Page load time
+What do CDN or Content Delivery Networks do? When do you need a CDN?
+What is the difference between Client Side Renderring and Server Side Renderring?
+What is Progressive Renderring
+What is the difference between Preloading and Prefetching resources?
+What are service workers?
+TCP Protocol
+
+TCP (Transmission Control Protocol) is a core protocol of the Internet Protocol Suite that enables reliable, ordered, and error-checked delivery of data between applications running on hosts in a network. It ensures that data is transmitted accurately and in the correct sequence, and it manages data retransmission in case of packet loss.
+HTTP Methods
+
+HTTP methods define the type of action to be performed on a resource. Here are the primary HTTP methods:
+
+    GET: Requests data from a specified resource.
+    POST: Submits data to be processed to a specified resource.
+    PUT: Updates a resource with the provided data.
+    DELETE: Deletes the specified resource.
+    HEAD: Requests only the headers of a specified resource.
+    OPTIONS: Describes the communication options for the target resource.
+    PATCH: Applies partial modifications to a resource.
+
+HTTP Headers
+
+HTTP headers are key-value pairs sent in HTTP requests and responses that provide additional context and control for the communication between the client and the server. They include information such as content type, content length, server information, caching directives, and more.
+HTTP Response Codes
+
+    2xx (Success): Indicates successful processing of the request.
+        200 OK: The request has succeeded.
+    3xx (Redirection): Indicates that further action needs to be taken by the user agent to fulfill the request.
+        301 Moved Permanently: The resource has been permanently moved to a new URL.
+    4xx (Client Error): Indicates that the request contains incorrect syntax or cannot be fulfilled.
+        404 Not Found: The server cannot find the requested resource.
+    5xx (Server Error): Indicates that the server failed to fulfill a valid request.
+        500 Internal Server Error: A generic error message when the server encounters an unexpected condition.
+
+Cache Control on HTTP Response
+
+Cache control directives in HTTP response headers specify how, where, and for how long a response should be cached. It helps in optimizing the performance by reducing the need to repeatedly fetch the same resource from the server.
+Polling
+
+Polling is a technique where a client repeatedly sends requests to the server at regular intervals to check for new data or updates.
+Long Polling
+
+Long polling is a variation of polling where the server holds the request open until new data is available, reducing the need for frequent requests and providing near-real-time updates.
+WebSockets
+
+WebSockets provide a full-duplex communication channel over a single, long-lived TCP connection. This allows for interactive and real-time communication between the client and the server.
+Differences Between WebSockets and HTTP
+
+    WebSockets: Enable a persistent, two-way connection that allows data to be sent and received simultaneously in real-time.
+    HTTP: Follows a request-response model, where each request from a client must be answered by a server response.
+
+HTTPS
+
+HTTPS (HyperText Transfer Protocol Secure) is an extension of HTTP. It uses SSL/TLS to encrypt data, ensuring secure communication over a network, protecting against eavesdropping and man-in-the-middle attacks.

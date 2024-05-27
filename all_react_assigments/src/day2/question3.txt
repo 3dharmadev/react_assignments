@@ -1,0 +1,279 @@
+how to add comments on css?
+Why do we use pseudo-class?
+How is specificity applied?
+What method allows an element to be moved from its current position?
+what properties does flex model have?
+What is the difference between flex and grids?
+Give an example where we have to use grids and where you have to use flexbox?
+Give an example where you cannot use flexbox, and you can only use grids?
+What are combinators? give examples of how you can use them
+What does object-fit do?
+What does rotate do?
+What rule can be used to define animations
+When working with attribute selectors, how can you select elements which contain a particular attribute value?
+What does @media do?
+What can be used to override properties of an element
+How can you select every alternate elements in a list of elements using css?
+What is the ranking of selectors with respect to specificity
+how can we apply same styles to multiple selectors?
+how to add comments on css?
+Why do we use pseudo-class?
+How is specificity applied?
+What method allows an element to be moved from its current position?
+what properties does flex model have?
+What are combinators? give examples of how you can use them
+What does object-fit do?
+What does rotate do?
+What rule can be used to define animations
+When working with attribute selectors, how can you select elements which contain a particular attribute value?
+What does @media do?
+What can be used to override properties of an element
+How can you select every alternate elements in a list of elements using css?
+What is the ranking of selectors with respect to specificity
+how can we apply same styles to multiple selectors?
+What are the differences between relative and absolute in CSS?
+
+Adding Comments in CSS
+
+To add comments in CSS, you use the /* */ syntax. Anything between /* and */ will be considered a comment and ignored by the browser.
+
+css
+
+/* This is a single-line comment */
+
+/*
+This is a
+multi-line comment
+*/
+
+Why Use Pseudo-Classes?
+
+Pseudo-classes are used to define the special states of an element. For example, you can style an element when it is hovered over, when it is the first child of its parent, or when a link has been visited.
+
+Examples:
+
+    :hover: Applies styles when an element is hovered by the mouse.
+    :first-child: Applies styles to the first child of a parent element.
+    :focus: Applies styles when an element has focus.
+
+Specificity in CSS
+
+Specificity determines which CSS rule is applied by the browser when multiple rules could apply to the same element. It is calculated based on the types of selectors used in a rule:
+
+    Inline styles have the highest specificity.
+    IDs (#id) are more specific than classes (.class), which are more specific than elements (element).
+
+Moving an Element
+
+To move an element from its current position, you can use the position property in combination with properties like top, right, bottom, and left.
+
+Example:
+
+css
+
+.element {
+  position: relative;
+  top: 10px; /* Moves the element 10px down */
+  left: 20px; /* Moves the element 20px to the right */
+}
+
+Flexbox Model Properties
+
+The Flexbox layout model includes several properties:
+
+    display: flex or display: inline-flex
+    flex-direction
+    justify-content
+    align-items
+    align-content
+    flex-wrap
+    flex-grow
+    flex-shrink
+    flex-basis
+    order
+
+Flex vs. Grid
+
+    Flexbox is a one-dimensional layout system for arranging items in rows or columns. Use it for simpler layouts that require alignment and distribution of space among items.
+    Grid is a two-dimensional layout system that can handle both rows and columns. Use it for more complex layouts where you need precise control over both dimensions.
+
+Example Usage of Flex and Grid
+
+Flexbox Example:
+
+    Navigation bars where items need to be evenly spaced.
+
+Grid Example:
+
+    Page layouts with headers, footers, sidebars, and main content areas.
+
+Scenario Where Only Grid Works:
+
+    A layout where you need to align items both horizontally and vertically across multiple rows and columns, such as a photo gallery.
+
+CSS Combinators
+
+Combinators describe the relationship between selectors. Examples include:
+
+    Descendant Combinator ( ): Selects elements that are descendants of another element.
+
+    css
+
+div p {
+  color: blue;
+}
+
+Child Combinator (>): Selects elements that are direct children of another element.
+
+css
+
+div > p {
+  color: green;
+}
+
+Adjacent Sibling Combinator (+): Selects an element that is directly after another element.
+
+css
+
+h1 + p {
+  color: red;
+}
+
+General Sibling Combinator (~): Selects all elements that are siblings of a specified element.
+
+css
+
+    h1 ~ p {
+      color: yellow;
+    }
+
+object-fit Property
+
+The object-fit property specifies how an image or video should be resized to fit its container.
+
+    fill: Default. The replaced content is sized to fill the element's content box.
+    contain: Scales the image to maintain its aspect ratio while fitting within the content box.
+    cover: Scales the image to maintain its aspect ratio while filling the content box.
+    none: The image is not resized.
+    scale-down: The content is sized as if either none or contain were specified, whichever would result in a smaller concrete object size.
+
+rotate Property
+
+The rotate function in CSS transforms is used to rotate elements.
+
+css
+
+.element {
+  transform: rotate(45deg); /* Rotates the element 45 degrees */
+}
+
+Defining Animations
+
+To define animations, you use the @keyframes rule.
+
+css
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+.element {
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+Attribute Selectors
+
+To select elements that contain a particular attribute value, you use attribute selectors.
+
+css
+
+/* Selects all elements with an attribute named 'data-type' */
+[data-type] {
+  color: blue;
+}
+
+/* Selects all elements with 'data-type' equal to 'example' */
+[data-type="example"] {
+  color: green;
+}
+
+/* Selects all elements with 'data-type' containing 'ex' */
+[data-type*="ex"] {
+  color: red;
+}
+
+@media Rule
+
+The @media rule is used for applying styles based on media queries, which allow for responsive designs.
+
+css
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+Overriding Properties
+
+To override properties of an element, you can use higher specificity selectors or the !important declaration.
+
+css
+
+.element {
+  color: blue !important; /* This will override any other color rule */
+}
+
+Selecting Every Alternate Element
+
+To select every alternate element, you can use the :nth-child pseudo-class.
+
+css
+
+li:nth-child(even) {
+  background-color: lightgray;
+}
+
+Specificity Ranking
+
+Specificity is calculated as follows:
+
+    Inline styles: 1000 points
+    ID selectors: 100 points
+    Class, pseudo-class, and attribute selectors: 10 points
+    Element and pseudo-element selectors: 1 point
+
+Applying Same Styles to Multiple Selectors
+
+You can apply the same styles to multiple selectors by separating them with commas.
+
+css
+
+h1, h2, h3 {
+  color: red;
+}
+
+Differences Between relative and absolute
+
+    relative: The element is positioned relative to its normal position. Other content will not be adjusted to fit into any gap left by the element.
+
+    css
+
+.relative {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+absolute: The element is positioned relative to its nearest positioned ancestor (an element with position set to relative, absolute, fixed, or sticky). If no such ancestor exists, it will be positioned relative to the initial containing block (typically the viewport).
+
+css
+
+    .absolute {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+
