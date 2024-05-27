@@ -1,0 +1,56 @@
+/* Navbar.css */
+
+/* General reset and box-sizing */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.logo h1{
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.nav-links{
+   
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+
+.nav-links li:hover {
+  color: #007BFF;
+}
+
+
+.contact-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
