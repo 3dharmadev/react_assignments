@@ -1,0 +1,21 @@
+.cricketScoreTracker {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .addScore, .addWicket, .addBall {
+    margin: 20px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
